@@ -12,7 +12,7 @@ import org.hibernate.cfg.Configuration;
 import org.hibernate.cfg.Environment;
 import org.hibernate.service.ServiceRegistry;
 import jm.task.core.jdbc.model.User;
-
+import javax.persistence.Transient;
 
 public class Util {
     // реализуйте настройку соеденения с БД
@@ -26,7 +26,6 @@ public class Util {
 
     public static Connection getConnection() {
         Connection connection = null;
-
         try {
             Class.forName(DB_DRIVER);
             connection = DriverManager.getConnection(DB_URL, DB_USERNAME, DB_PASSWORD);

@@ -9,13 +9,13 @@ public class User {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column
+    //@Column
     private String name;
 
-    @Column
+    //@Column
     private String lastName;
 
-    @Column
+    //@Column
     private Byte age;
 
     public User() {
@@ -68,4 +68,8 @@ public class User {
                 ", age=" + age +
                 '}';
     }
+    public String MysqlGenerate() {
+        return "id BIGINT not NULL AUTO_INCREMENT, name VARCHAR(255), lastName VARCHAR(255), age TINYINT, PRIMARY KEY ( id )";
+    }
+
 }
