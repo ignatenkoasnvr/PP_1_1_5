@@ -4,31 +4,25 @@ import jm.task.core.jdbc.model.User;
 
 import java.util.List;
 
+//@Repository
 public class UserDaoHibernateImpl implements UserDao {
-    public UserDaoHibernateImpl() {
-
-    }
-
+    public UserDaoHibernateImpl() {}
 
     @Override
     public void createUsersTable() {
-
     }
 
     @Override
     public void dropUsersTable() {
-
     }
 
     @Override
-    public void saveUser(String name, String lastName, byte age) {
-
+    public void saveUser(String name, String lastName, Byte age) {
     }
 
     @Override
     public void removeUserById(long id) {
-
-    }
+}
 
     @Override
     public List<User> getAllUsers() {
@@ -37,6 +31,5 @@ public class UserDaoHibernateImpl implements UserDao {
 
     @Override
     public void cleanUsersTable() {
-
     }
 }
