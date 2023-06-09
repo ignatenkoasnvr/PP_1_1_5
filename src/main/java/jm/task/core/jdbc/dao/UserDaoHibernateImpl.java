@@ -20,7 +20,7 @@ public class UserDaoHibernateImpl implements UserDao {
     public void createUsersTable() {
         try (Session session = sessionFactory.openSession()) {
             transaction = session.beginTransaction();
-            session.createNativeQuery("CREATE TABLE IF NOT EXISTS my_db.User " +
+            session.createNativeQuery("CREATE TABLE IF NOT EXISTS User " +
                     "(id BIGINT PRIMARY KEY AUTO_INCREMENT, " +
                     "name VARCHAR(64), " +
                     "last_name VARCHAR(64), " +
@@ -39,7 +39,7 @@ public class UserDaoHibernateImpl implements UserDao {
     public void dropUsersTable() {
         try (Session session = sessionFactory.openSession()) {
             transaction = session.beginTransaction();
-            session.createNativeQuery("DROP TABLE IF EXISTS my_db.User;")
+            session.createNativeQuery("DROP TABLE IF EXISTS User;")
                     .executeUpdate();
             transaction.commit();
             System.out.println("Table was dropped");
